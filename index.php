@@ -14,7 +14,7 @@ $app->get('/uma-api', function (Request $request, Response $response, $args) {
     return $response->withHeader('Content-Type', 'application/json');
 });
 
-// Endpoint: /codigos
+
 $app->get('/codigos', function (Request $request, Response $response, $args) {
     $data = [
         '200' => 'OK - Requisição bem-sucedida.',
@@ -25,7 +25,7 @@ $app->get('/codigos', function (Request $request, Response $response, $args) {
     return $response->withHeader('Content-Type', 'application/json');
 });
 
-// Endpoint: /erro
+
 $app->get('/erro', function (Request $request, Response $response, $args) {
     $data = ['erro' => 'Não encontrado'];
     $response->getBody()->write(json_encode($data));
